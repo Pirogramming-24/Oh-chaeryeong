@@ -1,0 +1,185 @@
+/* 기본 디자인 설정 */
+body {
+  font-family: sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  /* reset에서 지정한 검정색 무시 */
+}
+
+.wrapper {
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+#interview_piro .first #first_wrapper {
+    display:flex;
+    gap:500px;
+    align-items:center;
+    padding: 16px 0;
+}
+
+
+#interview_piro {}
+#interview_piro .first {
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    gap:100px;
+    align-items:center;
+
+    padding: 16px 24px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0)
+    );
+}
+#interview_piro .first a {}
+#interview_piro .first a img {max-width:40px; height:auto; display:block;}
+#interview_piro .first .firstright {}
+#interview_piro .first .firstright a {
+    display: inline-block;
+    font-weight:bold; margin-left:20px; text-decoration:none; color:#fff; font-size:1.3rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+#interview_piro .first .firstright a:hover {
+    color: #00ff6a; transform: translateY(-2px);
+}
+
+
+
+#interview_piro .second {margin-top:24px;}
+#interview_piro .second .wrapper {
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items:center;
+}
+#interview_piro .second h1 {
+    grid-column:2; justify-self:center;
+    font-size: 2rem; font-weight:bold;
+}
+#interview_piro .second .before {
+    grid-column:3; justify-self:end;
+    font-size: 1rem;
+}
+
+
+
+#interview_piro .card-container {
+    margin-top:32px;
+
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap:24px;
+}
+#interview_piro .card-container .card {
+    position:relative;
+    background-color:gray;
+    border-radius:14px;
+    padding:20px;
+
+    transition: transform 0.3s ease;
+}
+#interview_piro .card-container .card:hover {
+    transform: translateY(-2px);
+}
+
+
+#interview_piro .card-container .card .card-menu {
+    position:absolute; top:16px; right:16px;
+    display:flex; flex-direction:column; gap:4px;
+}
+#interview_piro .card-container .card .card-menu span {
+    width:18px; height:2px; background-color:white;
+    border-radius:2px; transition: all 0.3s ease;
+}
+#interview_piro .card-container .card:hover .card-menu span:nth-child(1) {transform: scaleX(0.6);}
+#interview_piro .card-container .card:hover .card-menu span:nth-child(3) {transform: scaleX(0.8);}
+
+
+
+#interview_piro .card-container .card .card-header {
+    display:flex; align-items:center; gap:12px;
+}
+#interview_piro .card-container .card .card-header .profile {
+    width:56px; height:56px; border-radius:50%; object-fit:cover;
+    transition: transform 0.3s ease;
+}
+#interview_piro .card-container .card:hover .card-header .profile {
+    transform: scale(1.15);
+}
+
+
+#interview_piro .card-container .card .card-header .info {}
+#interview_piro .card-container .card .card-header .info h2 {
+    font-size:1.1rem; font-weight:bold;
+}
+#interview_piro .card-container .card .card-header .info .major {
+    display:inline-block; margin-top:4px; padding: 2px 8px;
+    font-size: 0.75rem; border-radius:8px; background-color:skyblue;
+}
+#interview_piro .card-container .card .comment {
+    margin-top:14px; font-size:0.9rem;
+}
+
+
+#interview_piro .footer {
+    margin-top: 80px; padding: 48px 0; background-color: #222;
+}
+#interview_piro .footer .footer-top {
+    display:flex;
+    justify-content: space-between;
+}
+#interview_piro .footer .footer-top .footer-topleft {}
+#interview_piro .footer .footer-top .footer-topleft .footer-title {
+    font-size:1rem; margin-bottom:16px; display:inline-block;
+}
+#interview_piro .footer .footer-top .footer-topleft .footer-sns {}
+#interview_piro .footer .footer-top .footer-topleft .footer-sns a {margin-right:8px;}
+#interview_piro .footer .footer-top .footer-topleft .footer-mail {
+    display:block; margin-top:12px;
+}
+#interview_piro .footer .footer-top .footer-topright {}
+#interview_piro .footer .footer-top .footer-topright a {
+    margin-left: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+#interview_piro .footer .footer-top .footer-topright a:hover {
+    transform: translateY(-2px);
+}
+#interview_piro .footer .footer-bottom {
+    margin-top: 32px; text-align:center; font-size: 0.75rem; color:#666;
+}
+
+
+@media (max-width: 1024px) {
+  #interview_piro .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #interview_piro .card-container {
+    grid-template-columns: 1fr;
+  }
+  
+  #interview_piro .footer .footer-top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #interview_piro .firstright a {
+    margin-left: 12px;
+    font-size: 1rem;
+  }
+}
